@@ -1,0 +1,55 @@
+# --- Secrets / credentials (Gemini API keys, service accounts — DESIGN.md §2.3/§2.7) ---
+.env
+.env.*
+*.key
+credentials.json
+service-account*.json
+gcloud-*.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- ML artifacts: model weights, checkpoints, experiment tracking ---
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.bin
+checkpoints/
+models/
+mlruns/
+wandb/
+
+# --- Generated/raw data ---
+# Curated, reviewed datasets under data/ (synthetic_dataset.jsonl, gold_boundary_eval.jsonl,
+# labeling_rubric.md) ARE tracked. Only raw/unreviewed scale-up batches from
+# scripts/generate_synthetic_data.py go here, per DESIGN.md §5.2/§13's human-review step.
+data/raw/
+data/generated/
+data/*.tmp.jsonl
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- IDE ---
+.vscode/
+.idea/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
